@@ -1,0 +1,37 @@
+<xml version="1.0" encoding="UTF-8">
+    <!--Referencia al xsl-->
+<?xml-stylesheet type="text/xsl" href="usuarios.xsl"?>
+<!--Referencia al xsd para validar la estructura-->
+<usuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./usuarios.xsd">
+
+    <usuario id="ID001">
+        <nombre>Constantino</nombre>
+        <correo>lantigua21@gmail.com</correo>
+        <contraseña>1234</contraseña>
+        <rol>Administrador</rol>
+    </usuario>
+
+    <usuario id="ID002">
+        <nombre>Neftalí</nombre>
+        <correo>neftali@gmail.com</correo>
+        <contraseña>12345</contraseña>
+        <rol>Administrador</rol>
+    </usuario>
+
+    <usuario id="ID003">
+        <nombre>Jose</nombre>
+        <correo>jose@gmail.com</correo>
+        <contraseña>jose1234</contraseña>
+        <rol>Consultor</rol>
+    </usuario>
+
+    <usuario id="ID004">
+        <nombre>Manuel</nombre>
+        <correo>manuel@gmail.com</correo>
+        <contraseña>manuel1234</contraseña>
+        <rol>Consultor</rol>
+    </usuario>
+
+</usuarios>
+
+</xml>

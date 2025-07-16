@@ -1,0 +1,44 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Tipo personalizado para el rol -->
+    <xs:simpleType name="rolType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Administrador"/>
+            <xs:enumeration value="Consultor"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo personalizado para email -->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo personalizado para ID -->
+    <xs:simpleType name="idType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="ID[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento raíz -->
+    <xs:element name="usuarios">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="correo" type="emailType"/>
+                            <xs:element name="contraseña" type="xs:string"/>
+                            <xs:element name="rol" type="rolType"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="idType" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
