@@ -1,4 +1,4 @@
-# E2_UF2218
+# PPF_UF2218
 
 Dentro de este proyecto se presentará:
 
@@ -18,31 +18,20 @@ Dentro de este proyecto se presentará:
 
 En esta web podemos:
 
-	* Ver los coches que tenemos en una tabla
-	* Crear nuevos coches
-	* Cambiar los coches que ya tenemos
-	* Eliminar los coche que no queremos
+	* Iniciar sesión
+	* Acceder a los controles de administrador
+	* limitar el acceso de quien no sea administrador
 
 
 ## Explicación Técnica
 
-En este proyecto se podrá ver reflejado en una tabla todos los coches con los siguientes campos:
+En el proyecto se puede observar un login con sesiones creada para controlar el acceso al uso y la visualización del CRUD
 
-        - Matrícula
-        - Marca
-        - Modelo
-        - Puertas
-        - Color
-        - Precio (mostrado en €)
-        - Tipo De Venta
+Limitación del acceso a los usos del CRUD
 
-Además de tres funcionalidades:
-
-* Inserción de nuevos coches
-
-* Edición De coches existentes
-
-* Eliminación de coches
+	* Ocultación de todos los botones del CRUD
+	* Seguimiento de sesiones y boton de cerrar sesión controlado con session destroy()
+	* Mensajes de confirmación del tipo de rol en el index
 
 
 ## Estructura Del Proyecto
@@ -62,7 +51,9 @@ Todo el código -backend- mayormente php
 
 	c.eliminar.php
 
+	c.login.php
 
+	c.logout.php
 ### Vistas
 
 Todas las páginas a las que se redirige y muestran algo en pantalla con un estilo aplicado
@@ -73,6 +64,8 @@ Todas las páginas a las que se redirige y muestran algo en pantalla con un esti
 
 	insertar.php
 
+	login.php
+
 ### xml
 
 El núcleo del proyecto donde se guardan los archivos esenciales xml
@@ -82,3 +75,9 @@ El núcleo del proyecto donde se guardan los archivos esenciales xml
 	coches.xsd
 
 	coches.xsl
+
+	usuarios.xml
+
+	usuarios.xsd
+
+	usuarios.xsl
