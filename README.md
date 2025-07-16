@@ -33,6 +33,8 @@ Limitación del acceso a los usos del CRUD
 	* Seguimiento de sesiones y boton de cerrar sesión controlado con session destroy()
 	* Mensajes de confirmación del tipo de rol en el index
 
+ Buscador personalizado
+
 
 ## Estructura Del Proyecto
 
@@ -54,6 +56,8 @@ Todo el código -backend- mayormente php
 	c.login.php
 
 	c.logout.php
+
+ 	c.buscar_coche.php
 ### Vistas
 
 Todas las páginas a las que se redirige y muestran algo en pantalla con un estilo aplicado
@@ -65,6 +69,8 @@ Todas las páginas a las que se redirige y muestran algo en pantalla con un esti
 	insertar.php
 
 	login.php
+
+ 	buscar_coche.php
 
 ### xml
 
