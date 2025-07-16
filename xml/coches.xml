@@ -22,4 +22,4 @@
     <color>Guinda</color>
     <precio venta="nuevo">45874</precio>
   </coche>
-</coches>
+<coche matricula="2345FGB"><marca>Toyota</marca><modelo>Hippie</modelo><puertas>3</puertas><color>Guinda</color><precio venta="nuevo">45876</precio></coche><coche matricula="4567HHH"><marca>Fredolsen</marca><modelo>el de ayer</modelo><puertas>2</puertas><color>tgfdg</color><precio venta="nuevo">778</precio></coche></coches>

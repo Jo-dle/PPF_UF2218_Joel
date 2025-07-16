@@ -55,11 +55,8 @@ if (isset($_GET["error"]) && $_GET["error"] == "matricula_duplicada") {
     </div>";
 }
 
-
+//Incrustación de html para usar datatables y estilos con bootstrap
 echo <<<HTML
-<!-- Botón de logout -->
-<a href="../controladores/c.logout.php" class="btn btn-outline-secondary btn-sm">Cerrar sesión</a>
-
 <!-- jQuery y DataTables -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -75,7 +72,6 @@ echo <<<HTML
   });
 </script>
 HTML;
-echo "<p>ROL desde sesión: <strong>" . $_SESSION['rol'] . "</strong></p>";
 
 //imprimir el contenido transformado
 echo $proc->transformToXML($xml);

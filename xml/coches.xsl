@@ -56,9 +56,22 @@
         <div class="container">
           <h1 class="text-center">Listado de Coches</h1>
           <!--Botón que nos redirecciona a la pagina insertar para crear un coche nuevo-->
-          <div class="mb-4 text-end">
-            <a href="../vistas/insertar.php" class="btn btn-success">➕ Añadir nuevo coche</a>
-          </div>
+          <xsl:if test="$rol ='administrador'">
+          <!--Botones de navegación-->
+            <div class="d-flex justify-content-between mb-3">
+                <div>
+                    <a href="insertar.php" class="btn btn-primary btn-sm me-2">
+                        ➕ Introducir coche
+                    </a>
+                    <a href="buscar_coche.php" class="btn btn-success btn-sm">
+                        🔍 Buscar coche
+                    </a>
+                </div>
+                <a href="../controladores/c.logout.php" class="btn btn-outline-secondary btn-sm">
+                    🚪 Cerrar sesión
+                </a>
+            </div>
+          </xsl:if>
           <!--añadimos el id de la tabla para poder usar datatables de bootstrap-->
           <table id="tabla-coches" class="table table-bordered table-hover align-middle text-center">
             <thead>
