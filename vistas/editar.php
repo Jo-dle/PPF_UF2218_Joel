@@ -1,6 +1,17 @@
 <?php
 //incluimos los controladores de este archivo
-include_once "../controladores/c.editar.php"
+include_once "../controladores/c.editar.php";
+
+?>
+
+<?php
+//Iniciamos la sesión
+session_start();
+if (!isset($_SESSION['usuario']) || !isset($_SESSION['rol']) || $_SESSION['rol'] !== 'administrador') {
+    header("Location: ./login.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

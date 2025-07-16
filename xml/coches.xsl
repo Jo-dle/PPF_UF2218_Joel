@@ -3,6 +3,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+  <xsl:param name="rol"/>
 
   <xsl:template match="/">
     <html>
@@ -69,7 +70,9 @@
                 <th>Color</th>
                 <th>Precio (€)</th>
                 <th>Tipo de venta</th>
+                <xsl:if test="@rol ='administrador'">
                 <th>Acciones</th>
+                </xsl:if>
               </tr>
             </thead>
             <tbody>
@@ -83,12 +86,13 @@
                   <td><xsl:value-of select="color"/></td>
                   <td><xsl:value-of select="concat(precio, ' €')"/></td>
                   <td><xsl:value-of select="precio/@venta"/></td>
+                  <xsl:if test="$rol = administrador">
                   <td>
                     <div class="d-flex justify-content-center gap-2">
                       <a>
                         <!--Botón que nos redirecciona a editar-->
                         <xsl:attribute name="href">
-                          <xsl:text>editar.php?matricula=</xsl:text>
+                          <xsl:text>../vistas/editar.php?matricula=</xsl:text>
                           <xsl:value-of select="@matricula"/>
                         </xsl:attribute>
                         <button class="btn btn-primary btn-sm">✏️ Editar</button>
@@ -105,6 +109,7 @@
                       </a>
                     </div>
                   </td>
+                  </xsl:if>
                 </tr>
               </xsl:for-each>
             </tbody>

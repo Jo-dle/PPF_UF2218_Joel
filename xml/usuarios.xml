@@ -1,4 +1,4 @@
-<xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
     <!--Referencia al xsl-->
 <?xml-stylesheet type="text/xsl" href="usuarios.xsl"?>
 <!--Referencia al xsd para validar la estructura-->
@@ -33,5 +33,3 @@
     </usuario>
 
 </usuarios>
-
-</xml>
