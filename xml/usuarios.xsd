@@ -3,8 +3,8 @@
     <!-- Tipo personalizado para el rol -->
     <xs:simpleType name="rolType">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="Administrador"/>
-            <xs:enumeration value="Consultor"/>
+            <xs:enumeration value="administrador"/>
+            <xs:enumeration value="consultor"/>
         </xs:restriction>
     </xs:simpleType>
 

@@ -70,7 +70,7 @@
                 <th>Color</th>
                 <th>Precio (€)</th>
                 <th>Tipo de venta</th>
-                <xsl:if test="@rol ='administrador'">
+                <xsl:if test="$rol ='administrador'">
                 <th>Acciones</th>
                 </xsl:if>
               </tr>
