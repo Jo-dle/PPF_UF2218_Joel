@@ -7,10 +7,11 @@ include_once "../controladores/c.editar.php";
 <?php
 //Iniciamos la sesión
 session_start();
-if (!isset($_SESSION['usuario']) || !isset($_SESSION['rol']) || $_SESSION['rol'] !== 'administrador') {
+if ($_SESSION['rol'] == 'administrador') {}
+  else{
     header("Location: ./login.php");
     exit();
-}
+  }
 
 ?>
 <!DOCTYPE html>

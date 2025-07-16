@@ -1,11 +1,11 @@
 <?php
 //Iniciamos la sesión
 session_start();
-if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'administrador') {
+if ($_SESSION['rol'] == 'administrador') {}
+  else{
     header("Location: ./index.php");
     exit();
-}
-
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es">

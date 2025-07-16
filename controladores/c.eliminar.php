@@ -1,13 +1,5 @@
 <?php
 
-//Iniciamos la sesión
-session_start();
-if (!isset($_SESSION['usuario']) || !isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
-    header("Location: ../vistas/login.php");
-    exit();
-}
-
-
 //si no hay matricula en el campo no podemos borrar
 if (!isset($_GET["matricula"])) {
     die("⚠️ Error: Matrícula no especificada.");

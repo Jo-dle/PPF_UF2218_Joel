@@ -86,7 +86,7 @@
                   <td><xsl:value-of select="color"/></td>
                   <td><xsl:value-of select="concat(precio, ' €')"/></td>
                   <td><xsl:value-of select="precio/@venta"/></td>
-                  <xsl:if test="$rol = administrador">
+                  <xsl:if test="$rol = 'administrador'">
                   <td>
                     <div class="d-flex justify-content-center gap-2">
                       <a>

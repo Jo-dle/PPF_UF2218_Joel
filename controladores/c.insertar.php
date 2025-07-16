@@ -1,11 +1,11 @@
 <?php
 //Iniciamos la sesión
 session_start();
-if (!isset($_SESSION["usuario"]) || $_SESSION["rol"] !== "administrador") {
-    // Redirigir o mostrar mensaje de acceso denegado
-    header("Location: ../vistas/index.php");
+if ($_SESSION['rol'] == 'administrador') {}
+  else{
+    header("Location: ./index.php");
     exit();
-}
+  }
 
 // Abrimos php y llamamos al documento xml para cargar los datos
 $xml = new DOMDocument();

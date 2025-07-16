@@ -1,12 +1,4 @@
 <?php
-//Iniciamos la sesión
-session_start();
-if (!isset($_SESSION["usuario"]) || $_SESSION["rol"] !== "administrador") {
-    // Redirigir o mostrar mensaje de acceso denegado
-    header("Location: index.php");
-    exit();
-}
-
 //Cargamos el documento
 $xml = new DOMDocument();
 $xml->load("../xml/coches.xml");

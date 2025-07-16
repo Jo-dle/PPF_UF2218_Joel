@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="coches.xsl"?>
 <coches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./coches.xsd">
-  <coche matricula="0001DEF">
-    <marca>Volkswagen</marca>
-    <modelo>Golf</modelo>
-    <puertas>5</puertas>
-    <color>Negro</color>
-    <precio venta="segunda mano">9800</precio>
-  </coche>
   <coche matricula="5678AFG">
     <marca>Audi</marca>
     <modelo>10</modelo>
@@ -20,7 +13,7 @@
     <modelo>el de ayer</modelo>
     <puertas>2</puertas>
     <color>amarillo</color>
-    <precio venta="nuevo">454</precio>
+    <precio venta="ocasión">454</precio>
   </coche>
   <coche matricula="1234RTY">
     <marca>Toyota</marca>
